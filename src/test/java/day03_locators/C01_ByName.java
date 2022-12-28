@@ -22,10 +22,6 @@ public class C01_ByName {
 
 
 
-
-
-
-
         Thread.sleep(3000);
         driver.close();
 

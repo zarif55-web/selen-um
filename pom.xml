@@ -19,7 +19,27 @@
             githup adreslerini yazmamız yeterli olacaktır.
             gitHup adreslerini bulma ve projenin anlayacagı dilden buraya ekleme
             isini mvnrepestory.com'dan yapacagiz
+
+            pom.xml projemize ekleyecegimiz kutuphaneleri yonetmemiziz saglar
+            pom.xml maven projesinin kalbidir
+
+            pom.xml'e ekleyecegimiz dependency ve plug-in'ler sayesinde
+            projemizi cok daha efektif olarak yonetebiriz
          -->
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.5.3</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.3.1</version>
+        </dependency>
+
     </dependencies>
 
 </project>

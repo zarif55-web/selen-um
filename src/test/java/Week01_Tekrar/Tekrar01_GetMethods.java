@@ -1,4 +1,4 @@
-package day02_driverMethotlar;
+package Week01_Tekrar;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,12 +7,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Calisma01 {
-
+public class Tekrar01_GetMethods {
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("webdriver.chorme.driver","src/drivers/chromedriver_win32");
-        WebDriver driver=new ChromeDriver();
+        System.setProperty("webdriver.chorme.driver", "src/drivers/chromedriver_win32");
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
@@ -22,34 +21,33 @@ public class Calisma01 {
         Thread.sleep(3000);
         System.out.println(driver.getTitle());
         //3- Sayfa basliginin “Amazon” icerdigini test edin
-        String expectedKelime="Amazon";
-        String actualKelime=driver.getTitle();
+        String expectedKelime = "Amazon";
+        String actualKelime = driver.getTitle();
 
-        if (actualKelime.contains(expectedKelime)){
+        if (actualKelime.contains(expectedKelime)) {
             System.out.println("sayfa basligi amazon içeriyor, test PASSED ");
-        }else System.out.println("sayfa basligi amazon içermiyor, test FAILED");
+        } else System.out.println("sayfa basligi amazon içermiyor, test FAILED");
         Thread.sleep(3000);
         //4- Sayfa adresini(url) yazdirin
         System.out.println(driver.getCurrentUrl());
         //5- Sayfa url’inin “amazon” icerdigini test edin.
-        String expectedUrl="amazon";
-        String actualUrl=driver.getCurrentUrl();
+        String expectedUrl = "amazon";
+        String actualUrl = driver.getCurrentUrl();
 
-        if (actualUrl.contains(expectedUrl)){
+        if (actualUrl.contains(expectedUrl)) {
             System.out.println("sayfa Url'si amazon içeriyor, test PASSED ");
-        }else System.out.println("sayfa Url'si amazon içermiyor, test FAILED");
+        } else System.out.println("sayfa Url'si amazon içermiyor, test FAILED");
         Thread.sleep(3000);
 
         //6- Sayfa handle degerini yazdirin
         System.out.println(driver.getWindowHandle());//CDwindow-FDA253900727841A2DCA0A2D1C534ACD
         //7- Sayfa HTML kodlarinda “alisveris” kelimesi gectigini test edin
-        WebElement aramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
+        WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("alisveris");
         aramaKutusu.clear();
         Thread.sleep(3000);
         //8- Sayfayi kapatin.
         driver.close();
-
 
     }
 }
